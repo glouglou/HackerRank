@@ -1,0 +1,22 @@
+
+#Ex Day 20
+#un algorithme qui s'appelle Bubble Sort.
+
+import sys
+
+n = int(input().strip()) #obtention des variables de hackerrank
+a = list(map(int, input().strip().split(' '))) #créaton d'une liste
+numberOfSwaps = 0    
+for i in range(0,n): 
+     # Track number of elements swapped during a single array traversal
+    for j in range (0,n-1):
+        if (a[j]>a[j+1]):
+            a[j],a[j+1]=a[j+1],a[j]
+            numberOfSwaps=numberOfSwaps+1
+    firstEl=a[0]
+    lastEl=a[n-1]
+print("Array is sorted in",numberOfSwaps,"swaps.")  
+print("First Element:",firstEl)
+print("Last Element:",lastEl)
+            
+            
